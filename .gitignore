@@ -1,0 +1,19 @@
+# Executable files
+*.exe
+*.out
+*.o
+
+# Output files
+out_put*.txt
+
+# SDL2 libraries (should be installed separately)
+src/lib/
+src/include/SDL2/
+
+# IDE files
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
