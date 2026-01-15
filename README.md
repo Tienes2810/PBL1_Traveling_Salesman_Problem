@@ -16,7 +16,7 @@ The **Traveling Salesman Problem (TSP)** is a Project-Based Learning (PBL1) assi
 ## 👥 Team Members
 
 **Team Leader:** Nguyen Tien  
-**Members:** [Add other team members]
+**Member:** Tran Minh Truong
 
 ## ✨ Features
 
