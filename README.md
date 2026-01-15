@@ -155,7 +155,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Instructor: [Instructor Name]
+- Instructor: Nguyen Van Hieu
 - Faculty of Information Technology - Da Nang University of Science and Technology
 - SDL2 Developer Community
 
