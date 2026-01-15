@@ -4,78 +4,78 @@
 [![SDL2](https://img.shields.io/badge/Graphics-SDL2-green.svg)](https://www.libsdl.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📋 Giới thiệu
+## 📋 About
 
-Dự án **Traveling Salesman Problem (TSP)** là bài tập lớn môn Lập trình cơ sở 1 (PBL1) tại **Đại học Bách Khoa - Đại học Đà Nẵng**. Đây là một ứng dụng giải quyết bài toán người du lịch (TSP) với giao diện đồ họa sử dụng thư viện SDL2.
+The **Traveling Salesman Problem (TSP)** is a Project-Based Learning (PBL1) assignment for the Introduction to Programming course at **Da Nang University of Science and Technology**. This application solves the TSP optimization problem with a graphical user interface using the SDL2 library.
 
-### 🎯 Mục tiêu dự án
-- Giải quyết bài toán tối ưu hóa TSP (tìm đường đi ngắn nhất qua tất cả các thành phố)
-- Trực quan hóa thuật toán và kết quả bằng giao diện đồ họa
-- Áp dụng các thuật toán nhánh cận (Branch and Bound) và quy hoạch động (Dynamic Programming)
+### 🎯 Project Objectives
+- Solve the TSP optimization problem (finding the shortest route visiting all cities)
+- Visualize algorithms and results with a graphical interface
+- Implement Branch and Bound and Dynamic Programming algorithms
 
-## 👥 Thành viên nhóm
+## 👥 Team Members
 
-**Team Leader:** Nguyễn Tiến  
-**Thành viên:** [Thêm tên các thành viên khác]
+**Team Leader:** Nguyen Tien  
+**Members:** [Add other team members]
 
-## ✨ Tính năng
+## ✨ Features
 
-- ✅ Đọc dữ liệu ma trận chi phí từ file input
-- ✅ Giải bài toán TSP bằng các thuật toán:
-  - Branch and Bound (Nhánh cận)
+- ✅ Read cost matrix data from input files
+- ✅ Solve TSP using algorithms:
+  - Branch and Bound
   - Dynamic Programming with Bitmask
-- ✅ Giao diện đồ họa SDL2 hiển thị:
-  - Ma trận chi phí
-  - Đường đi tối ưu
-  - Chi phí nhỏ nhất
-- ✅ Xuất kết quả ra file output
-- ✅ Hỗ trợ tối đa 20 thành phố
+- ✅ SDL2 graphical interface displaying:
+  - Cost matrix
+  - Optimal route
+  - Minimum cost
+- ✅ Export results to output file
+- ✅ Support up to 20 cities
 
-## 🛠️ Công nghệ sử dụng
+## 🛠️ Technologies
 
-- **Ngôn ngữ:** C
-- **Thư viện đồ họa:** SDL2, SDL2_ttf, SDL2_image
-- **Build tool:** GCC, Make
+- **Language:** C
+- **Graphics Libraries:** SDL2, SDL2_ttf, SDL2_image
+- **Build Tools:** GCC, Make
 - **IDE:** Visual Studio Code
 
-## 📦 Cài đặt
+## 📦 Installation
 
-### Yêu cầu hệ thống
+### System Requirements
 - Windows OS
 - GCC compiler (MinGW)
 - SDL2 development libraries
 
-### Các bước cài đặt
+### Installation Steps
 
 1. **Clone repository:**
 ```bash
-git clone https://github.com/Tienes2810/Traveling-Salesman-Problem.git
-cd Traveling-Salesman-Problem
+git clone https://github.com/Tienes2810/PBL1_Traveling_Salesman_Problem.git
+cd PBL1_Traveling_Salesman_Problem
 ```
 
-2. **Cài đặt SDL2:**
-   - Thư viện SDL2 đã được bao gồm trong thư mục `src/lib`
-   - Đảm bảo các file `.dll` (SDL2.dll, SDL2_ttf.dll, SDL2_image.dll) có trong thư mục gốc
+2. **Install SDL2:**
+   - SDL2 libraries are included in the `src/lib` directory
+   - Ensure `.dll` files (SDL2.dll, SDL2_ttf.dll, SDL2_image.dll) are in the root directory
 
-3. **Biên dịch chương trình:**
+3. **Compile the program:**
 ```bash
 make build
 ```
 
-4. **Chạy chương trình:**
+4. **Run the program:**
 ```bash
 make run
 ```
 
-hoặc:
+or:
 ```bash
 ./main.exe
 ```
 
-## 📖 Hướng dẫn sử dụng
+## 📖 User Guide
 
-### Format file input
-Tạo file `in_put.txt` với định dạng:
+### Input File Format
+Create an `in_put.txt` file with the following format:
 ```
 n
 c[0][0] c[0][1] ... c[0][n-1]
@@ -84,13 +84,13 @@ c[1][0] c[1][1] ... c[1][n-1]
 c[n-1][0] c[n-1][1] ... c[n-1][n-1]
 ```
 
-Trong đó:
-- `n`: Số lượng thành phố (3 ≤ n ≤ 20)
-- `c[i][j]`: Chi phí di chuyển từ thành phố i đến thành phố j
-- `c[i][i] = 0`: Chi phí đi từ một thành phố đến chính nó = 0
-- `c[i][j] = 0`: Không có đường đi trực tiếp giữa i và j
+Where:
+- `n`: Number of cities (3 ≤ n ≤ 20)
+- `c[i][j]`: Cost of traveling from city i to city j
+- `c[i][i] = 0`: Cost of traveling from a city to itself = 0
+- `c[i][j] = 0`: No direct route between i and j
 
-### Ví dụ input (4 thành phố):
+### Example Input (4 cities):
 ```
 4
 0 10 15 20
@@ -99,36 +99,36 @@ Trong đó:
 20 25 30 0
 ```
 
-### Chạy chương trình:
-1. Đặt file input trong thư mục gốc
-2. Chạy `./main.exe`
-3. Sử dụng giao diện để chọn file input và xem kết quả
-4. Kết quả sẽ được lưu vào file output
+### Running the Program:
+1. Place the input file in the root directory
+2. Run `./main.exe`
+3. Use the GUI to select input file and view results
+4. Results will be saved to output file
 
-## 📊 Thuật toán
+## 📊 Algorithms
 
-### 1. Branch and Bound (Nhánh cận)
-- Tìm kiếm theo chiều sâu với chiến lược cắt tỉa
-- Sử dụng giới hạn dưới (lower bound) để loại bỏ các nhánh không tối ưu
-- Độ phức tạp: O(n!)
+### 1. Branch and Bound
+- Depth-first search with pruning strategy
+- Uses lower bound to eliminate non-optimal branches
+- Time complexity: O(n!)
 
 ### 2. Dynamic Programming with Bitmask
-- Sử dụng quy hoạch động với bitmask để lưu trạng thái đã thăm
-- Công thức truy hồi: `dp[mask][i]` = chi phí nhỏ nhất khi đã thăm các thành phố trong mask và kết thúc tại i
-- Độ phức tạp: O(n² × 2ⁿ)
+- Uses dynamic programming with bitmask to track visited states
+- Recurrence relation: `dp[mask][i]` = minimum cost when visited cities in mask and ending at i
+- Time complexity: O(n² × 2ⁿ)
 
-## 📁 Cấu trúc thư mục
+## 📁 Project Structure
 
 ```
 PBL1/
-├── main.c                 # File chính chứa code
-├── pbl1nowing.c          # Code phiên bản không GUI
+├── main.c                 # Main source code
+├── pbl1nowing.c          # Non-GUI version
 ├── Makefile              # Build script
 ├── README.md             # Documentation
-├── in_put*.txt           # File input mẫu
-├── out_put*.txt          # File output kết quả
-├── Arial.TTF             # Font cho SDL2_ttf
-├── logo.jpeg             # Logo dự án
+├── in_put*.txt           # Sample input files
+├── out_put*.txt          # Output result files
+├── Arial.TTF             # Font for SDL2_ttf
+├── logo.jpeg             # Project logo
 ├── SDL2*.dll             # SDL2 runtime libraries
 └── src/
     ├── include/SDL2/     # SDL2 header files
@@ -137,33 +137,33 @@ PBL1/
 
 ## 🎮 Demo
 
-Chương trình cung cấp giao diện đồ họa để:
-- Chọn file input
-- Hiển thị ma trận chi phí
-- Visualize đường đi tối ưu
-- Hiển thị tổng chi phí nhỏ nhất
+The program provides a graphical interface to:
+- Select input files
+- Display cost matrix
+- Visualize optimal route
+- Show minimum total cost
 
-## 📝 Tài liệu tham khảo
+## 📝 References
 
 - [Traveling Salesman Problem - Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 - [SDL2 Documentation](https://wiki.libsdl.org/)
-- Giáo trình Lập trình cơ sở 1 - ĐH Bách Khoa Đà Nẵng
+- Introduction to Programming Course - Da Nang University of Science and Technology
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Lời cảm ơn
+## 🙏 Acknowledgments
 
-- Giảng viên hướng dẫn: [Tên giảng viên]
-- Khoa Công nghệ Thông tin - ĐH Bách Khoa Đà Nẵng
-- Cộng đồng SDL2 developers
+- Instructor: [Instructor Name]
+- Faculty of Information Technology - Da Nang University of Science and Technology
+- SDL2 Developer Community
 
-## 📧 Liên hệ
+## 📧 Contact
 
 - **Email:** nguyentien281006@gmail.com
 - **GitHub:** [@Tienes2810](https://github.com/Tienes2810)
 
 ---
 
-⭐ Nếu bạn thấy dự án hữu ích, hãy cho chúng tôi một star nhé!
+⭐ If you find this project useful, please give us a star!
